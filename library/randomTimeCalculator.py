@@ -4,8 +4,8 @@ import pytz
 
 def generate_random_time_ist():
     # Define the start and end time as datetime objects (8 AM and 8 PM IST)
-    start_time = datetime.strptime("08:00:00", "%H:%M:%S")
-    end_time = datetime.strptime("20:00:00", "%H:%M:%S")
+    start_time = datetime.strptime("09:00:00", "%H:%M:%S")
+    end_time = datetime.strptime("16:00:00", "%H:%M:%S")
 
     # Calculate the difference (timedelta) between the two times
     delta = end_time - start_time

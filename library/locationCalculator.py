@@ -1,6 +1,5 @@
 # from geopy.geocoders import Nominatim
-from googletrans import Translator
-import asyncio
+# from googletrans import Translator
 # from googletrans import AsyncTranslator
 # Initialize the geolocator and translator
 # geolocator = Nominatim(user_agent="myExercises")
@@ -34,25 +33,25 @@ def get_location_from_lat_lon(lat, lon):
 
 
 # Function to translate the address to Hindi
-async def getLocationName(latitude, longitude):
+def getLocationName(latitude, longitude):
     location_in_english = get_location_from_lat_lon(latitude, longitude)
     print(location_in_english)
-    return await transliterate_to_hindi(location_in_english)
+    return location_in_english
 
 # # Input Latitude and Longitude
 # latitude = float(input("Enter latitude: "))
 # longitude = float(input("Enter longitude: "))
 
 # Get the location in English
-async def transliterate_to_hindi(text):
-    # Initialize the Translator
-    translator = Translator()
+# async def transliterate_to_hindi(text):
+#     # Initialize the Translator
+#     translator = Translator()
 
-    # Use the translate method and await it
-    translated = await asyncio.to_thread(translator.translate, text, 'en', 'hi')
+#     # Use the translate method and await it
+#     translated = await asyncio.to_thread(translator.translate, text, 'en', 'hi')
 
-    # Return the translated text
-    return translated.text
+#     # Return the translated text
+#     return translated.text
 
 # Translate the location to Hindi
 # location_in_hindi = getLocationName(latitude, longitude)
